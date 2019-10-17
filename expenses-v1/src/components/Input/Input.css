@@ -1,9 +1,0 @@
-.Input-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.Input-label {
-  width: 5em;
-}
