@@ -43,14 +43,24 @@ const App = () => {
     name: '',
     cost: '',
     sum: 0,
-    list: ['hey']
+    list: []
   });
 
-  useEffect(() => {
+  const Card = styled.div`
+    width: 300px;
+    height: 100px;
+    background-color: azure;
+    color: blueviolet;
+    border: 2px solid darkgray;
+    border-radius: 4px;
+    margin: 3px;
+  `;
+
+  /* useEffect(() => {
     if (state.list.length === 1) {
       setState({ ...state, list: [...state.list, 'HEY'] });
     }
-  });
+  }); */
 
   const handleChange = event => {
     if (event.target.name === 'Name') {
@@ -93,6 +103,9 @@ const App = () => {
           <output name="sum">{state.sum}</output>
         </Bullet>
       </List>
+      {state.list.map(item => (
+        <Card>{item}</Card>
+      ))}
     </Wrapper>
   );
 };
